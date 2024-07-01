@@ -23,6 +23,7 @@ urlpatterns = [
     path('', views.layout, name = "layout"),
     path('listar-cursos/',views.listar_cursos,name="listar_cursos"),
     path('crear-curso/',views.crear_curso,name="crear_curso"),
+    path('eliminar-curso/<int:idcourse>',views.eliminar_curso,name="eliminar_curso"),
     path('listar-carreras/',views.listar_carreras,name="listar_carreras"),
     path('crear-carrera/',views.crear_carrera,name="crear_carrera"),
 ]

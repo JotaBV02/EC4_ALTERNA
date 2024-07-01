@@ -5,7 +5,48 @@
 {% endblock  %}
 
 {% block content %}
-    <h1 class="title">
-        Listado de Cursos
-    </h1>
+<h1 class="title">
+    {{titulo}} 
+</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="message">
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+        {% for curso in cursos %}
+            <div class="articulo-item">
+                <div class="data">
+                    <h2>
+                        Código: {{curso.code}}
+                    </h2>
+                    <h2>
+                        Curso: {{curso.name}}
+                    </h2>
+                    <h2>
+                        Horas: {{curso.hour}}
+                    </h2>
+                    <h2>
+                        Créditos {{curso.credits}}
+                    </h2>
+                    {% if curso.state%}
+                        <strong>
+                            Con Cupos
+                        </strong>
+                    {% else %}
+                        <strong>
+                            Sin Cupos
+                        </strong>
+                    {% endif %}
+                <p>
+                    {{curso.contenido}}
+                    <a href="{% url 'eliminar_curso' idcourse=curso.idcourse %}"  class="btn btn-delete">
+                        Eliminar
+                    </a>
+                </p>
+                </div>
+             <div class="clearfix"></div>
+            </div>
+        {% endfor %}
 {% endblock %}

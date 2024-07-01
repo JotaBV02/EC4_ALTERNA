@@ -6,17 +6,81 @@
     text-decoration: none;
 }
 
+.box p, .box h2, .box h3, .box ul{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.box ul, .box ol{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
 body{
     background-color: #f2f2f2;
+}
+.articulo-item{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 15px;
+    border-bottom: 1px solid black;
+    clear: both;
+}
+.articulo-item .image{
+    width: 200px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+}
+
+
+.articulo-item .image img{
+    height: 200px;
+}
+.articulo-item .data{
+    float: left;
+    padding: 15px;
+    padding-top: 0px;
+}
+
+
+.articulo-item h2{
+    display: block;
+    font-size: 25px;    
+    color: #333;
+    margin-bottom: 10px;
+}
+.articulo-item span.date{
+    display: block;
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+
+.btn{
+    padding: 10px;
+    background: rgb(207, 48, 48);
+    color: white;
+    border: 1px solid black;
+    display: block;
+    margin-top: 15px;
+    width: 100px;
+    text-align: center;
 }
 
 /* Estilos Cabecera */
 header{
-    width: 1250px;
+    width: 1251px;
     height: 140px;
     background-color: #23282B;
     margin: 0 auto;
 }
+
 
 #logotipo {
     width: 35%;
@@ -25,12 +89,14 @@ header{
     padding-top: 10px;
 }
 
+
 #logotipo img{
     display: block;
     width: 60px;
     float: left;
     margin-top: 20px;
 }
+
 
 #logotipo h1{
     display: block;
@@ -41,8 +107,8 @@ header{
     font-weight: lighter;
     color: #2ba977;
 }
-
 /*Estilos Navegación*/
+
 /*Zona de menu*/
 nav{
     width: 1250px;
@@ -54,6 +120,7 @@ nav{
     font-size: 15px;
 }
 
+
 /*Zona de enlaces*/
 nav ul{
     list-style: none;
@@ -64,6 +131,7 @@ nav ul li{
     float: left;
 }
 
+
 /*Hipervinculos*/
 nav ul li a{
     display: block;
@@ -71,6 +139,7 @@ nav ul li a{
     padding-right: 15px;
     color: #d1d4d6;
 }
+
 
 /*Efecto en Hipervínculos*/
 nav ul li a:hover{
@@ -86,6 +155,7 @@ nav ul li a:hover{
     margin: 0 auto;
 }
 
+
 .esquina-izquierda{
     display: block;
     border-left: 20px solid transparent;
@@ -93,12 +163,14 @@ nav ul li a:hover{
     float: left;
 }
 
+
 .esquina-derecha{
     display: block;
     border-right: 20px solid transparent;
     border-top: 10px solid #2B2F30;
     float: right;
 }
+
 
 /*Relleno del hueco*/
 .relleno-barra{
@@ -108,10 +180,9 @@ nav ul li a:hover{
     background: #2B2F30;
     float: left;
 }
-
 /*Estilos para el CONTENIDO*/
 #content{
-    width: 1250px;
+    width: 1251px;
     min-height: 930px;
     margin: 0 auto;
     margin-bottom: 30px;
@@ -128,6 +199,8 @@ nav ul li a:hover{
     border-radius: 2px;
     margin: 0 auto;
 }
+
+
 
 .title{
     color: #444;
@@ -149,6 +222,76 @@ footer{
     padding-bottom: 20px;
     box-shadow: 0px 0px 20px gray;
 }
+
+.box{
+    background: white;
+    width: 95%;
+    min-height: 930px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    margin: 0 auto;
+}
+
+
+.box form{
+    width: 40%;
+}
+
+
+.box form input, .box form label{
+    display: block;
+    padding: 5px;
+    padding-left: 0px;
+}
+
+
+.box form input[type="text"], 
+.box form textarea,
+.box form select{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.box form select{
+    width: 100px;
+    padding: 5px;
+}
+
+
+.box form input[type="submit"],
+.box form input[type="button"],
+.box form button{
+    padding: 10px;
+    margin-top: 5px;
+    background: #2ba977;
+    border: 1px solid #444;
+    color: white;
+    transition: 300ms all;
+
+
+}
+
+.rojo{
+    color: red;
+}
+.message{
+    padding: 20px;
+    background: #1f7e58;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.box form input[type="submit"]:hover,
+.box form input[type="button"]:hover,
+.box form button:hover{
+    cursor: pointer;
+    background: #1f7e58;
+}  
+
+
 
 
 
