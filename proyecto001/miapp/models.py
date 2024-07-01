@@ -8,5 +8,11 @@ class Course(models.Model):
     hour = models.PositiveIntegerField()
     credits = models.PositiveIntegerField()
     state = models.BooleanField()
-    
+ 
+class Career(models.Model):
+    idcareer = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100)
+    shortname = models.CharField(max_length=10)
+    image = models.ImageField(upload_to='carreras', default='null')
+    state = models.BooleanField()   
     

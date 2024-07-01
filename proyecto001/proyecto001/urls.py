@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from miapp import views
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -26,4 +28,5 @@ urlpatterns = [
     path('eliminar-curso/<int:idcourse>',views.eliminar_curso,name="eliminar_curso"),
     path('listar-carreras/',views.listar_carreras,name="listar_carreras"),
     path('crear-carrera/',views.crear_carrera,name="crear_carrera"),
-]
+    path('eliminar-carrera/<int:idcareer>',views.eliminar_carrera,name="eliminar_carrera"),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

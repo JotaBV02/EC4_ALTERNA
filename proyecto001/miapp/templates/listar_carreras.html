@@ -5,7 +5,47 @@
 {% endblock  %}
 
 {% block content %}
-    <h1 class="title">
-        Listado de Carreras
-    </h1>
+<h1 class="title">
+    {{titulo}} 
+</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="message">
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+        {% for carrera in carreras %}
+            <div class="articulo-item">
+                {% if carrera.image and carrera.image.url %}
+                    <div class="image">
+                        <img src="{{ carrera.image.url }}" alt="Imagen de la Carrera" />
+                    </div>
+                {% endif %}
+                <div class="data">
+                    <h2>
+                        Nombre: {{carrera.name}}
+                    </h2>
+                    <h2>
+                        ShortName: {{carrera.shortname}}
+                    </h2>
+                    {% if carrera.state%}
+                        <strong>
+                            Habilitada
+                        </strong>
+                    {% else %}
+                        <strong>
+                            No Habilitada
+                        </strong>
+                    {% endif %}
+                <p>
+                    {{carrera.contenido}}
+                    <a href="{% url 'eliminar_carrera' idcareer=carrera.idcareer %}"  class="btn btn-delete">
+                        Eliminar
+                    </a>
+                </p>
+                </div>
+             <div class="clearfix"></div>
+            </div>
+        {% endfor %}
 {% endblock %}
